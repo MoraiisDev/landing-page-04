@@ -1,12 +1,16 @@
 :root {
   --color-white: rgba(255,255,255,0.3);
   --color-secondary-white: #F2F4F8;
+  --color-only-white: #fff;
   
   --color-gray: #ECECEC;
   --color-gray65: #ECECECA6;
+  --color-gray80: #ECECECA8;
 
   --color-purple: #370C94;
   --color-header: #0B0121;
+  --color-header-mobile: #000000CC;
+
 }
 
 .description {
@@ -16,12 +20,37 @@
   color: var(--color-gray65);
 }
 
+.cta.outlined {
+  color: var(--color-gray);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  padding: 18px 89px;
+  border-radius: 92px;
+  border: 1px solid var(--color-gray);
+}
+
+.title {
+  font-size: 62px;
+  font-weight: 500;
+  line-height: 62px;
+  color: var(--color-gray);
+}
+
+.view__description {
+  color: var(--color-only-white);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-decoration: underline;
+}
+
 body {
-  background-image: linear-gradient(to bottom, var(--color-purple) , var(--color-header));
+  background-image: linear-gradient(to bottom, var(--color-header), var(--color-purple));
 }
 
 header {
-  background-color: var(--color-header);
+  background-color: var(--color-header-mobile);
 
   .container {
     display: flex;
@@ -37,10 +66,10 @@ header {
   /* background-image: url(../imgs/background.png); */
   background-repeat: no-repeat;
   .container {
-    /* display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: center; */
+    align-items: center;
 
     .cta-learn {
       font-size: 12px;
@@ -50,7 +79,7 @@ header {
       padding: 8px 16px 10px;
       border-radius: 48px;
       border: solid 0.97px var(--color-white);
-      margin-top: 89px;
+      margin: 89px 0 6px;
 
     }
     .ctas {
@@ -68,30 +97,134 @@ header {
         padding: 18px 80px;
         border-radius: 90px;
         margin-bottom: 28px;
-
       }
-      .cta.outlined {
-        color: var(--color-gray);
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 27px;
-        padding: 18px 89px;
-        border-radius: 92px;
-        border: 1px solid var(--color-gray);
-        }
     }
 
     .title {
-      font-size: 62px;
-      font-weight: 500;
-      line-height: 62px;
-      color: var(--color-gray);
       text-align: center;
     }
 
     .description {
       text-align: center;
       margin: 31px 24px 32px;
+    }
+  }
+}
+
+.approvals {
+  .container {
+  margin-top: 91px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+    .description {
+      margin: 91px 24px 61px;
+      font-size: 18px;
+      color: var(--color-gray80);
+      line-height: 130%;
+      text-align: center;
+    }
+
+    img {
+      margin-bottom: 77px;
+    }
+
+    img:last-child {
+      margin-bottom: 91px;
+    }
+  }
+}
+
+.section-analytics {
+  .container {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .title {
+      font-size: 48px;
+      line-height: 120%;
+      text-align: center;
+    }
+
+    .description {
+      margin: 37px 26px 60px;
+      color: var(--color-gray);
+      font-size: 18px;
+      line-height: 150%;
+      text-align: center;
+      /* width: 323px; */
+    }
+
+    .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    width: 327px;
+    max-width: 100%;
+    border-radius: 31px;
+    box-shadow: 0 0 8px 4px var(--color-gray);
+    background-color: var(--color-header);
+
+      img {
+        margin: 66px 0 24px;
+      }
+
+      .title {
+        font-size: 26px;
+        line-height: 130%;
+        text-align: start;
+      }
+
+      .description__secondary {
+        font-size: 16px;
+        color: var(--color-gray);
+        text-align: left;
+        font-weight: 400;
+        margin: 15px 0;
+      }
+
+      .cta.outlined {
+        padding: 18px 35px;
+        border: 2px solid var(--color-gray);
+      }
+
+      .view__description__first {
+        color: var(--color-only-white);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        margin: 40px 0 66px;
+        text-decoration: underline;
+      }
+    }
+
+    .content:last-child {
+      justify-content: center;
+      align-items: center;
+
+      .title {
+        text-align: center;
+        margin-top: 66px;
+        font-weight: 700;
+      }
+      .description__secondary {
+        text-align: center;
+        margin: 36px 17px 60px;
+      }
+      .cta.outlined {
+        margin-bottom: 66px;
+      }
+    }
+
+    .content:not(:last-child) {
+
+      margin-bottom: 60px;
     }
   }
 }
